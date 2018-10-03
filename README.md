@@ -2,7 +2,7 @@
 
 ![Imgur](https://i.imgur.com/D9OmeY5.png)
 
-Using [Puppeteer](https://pptr.dev/) as a web crawler to get [Tibia](https://tibia.com/) world players.
+Using [Puppeteer](https://pptr.dev/) as a web crawler to get [Title] and [ Link ] (https://tibia.com/) world players.
 
 `git clone https://github.com/brmartins92/getPlayersFromWorld.git`
 
