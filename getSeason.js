@@ -1,19 +1,20 @@
 const puppeteer = require("puppeteer");
 
 let getSeason = async season => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
 
   await page.goto(`http://legendas.tv/busca/The%20Simpsons/${season}`);
-  //await page.waitFor(1000);
 
-  const result = await page.evaluate(() => {
+  const result = await page.evaluate(async() => {
     let data = [];
-    let btnCarregarMais = document.querySelector("#resultado_busca > a");
+    //let btnCarregarMais = document.querySelector("#resultado_busca > a");
 
-    while (btnCarregarMais) {
+    while (btnCarregarMais = document.querySelector("#resultado_busca > a")) {
       btnCarregarMais.click();
-      waitFor(1000);
+      //btnCarregarMais = ""; 
+      //btnCarregarMais = document.querySelector("#resultado_busca > a");
+
     }
 
     Array.from(document.querySelectorAll(".gallery > article > div")).map(div =>
@@ -32,7 +33,7 @@ let getSeason = async season => {
     return data;
   });
 
-  //browser.close();
+  browser.close();
   return result;
 };
 
