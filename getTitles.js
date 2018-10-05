@@ -49,7 +49,7 @@ let getTitles = async movie => {
       data.push({
         title: title,
         description: description,
-        id: `http://localhost:4000/season/${id}`
+        id: `http://localhost:3000/season/${id}`
       });
     }
 

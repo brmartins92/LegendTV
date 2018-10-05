@@ -11,6 +11,6 @@ app.get("/season/:season", (req, res) => {
   getSeason(req.params.season).then(value => res.json(value));
 });
 
-app.listen(4000, () => {
+app.listen(3000, () => {
   console.log("Crawling data...");
 });
